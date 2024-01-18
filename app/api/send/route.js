@@ -11,7 +11,7 @@ export async function POST(req) {
   const { pairedEmail } = body[1];
   try {
     const data = await resend.emails.send({
-      from: "CONTACT <onboarding@resend.dev>",
+      from: "PAIRED <onboarding@resend.dev>",
       to: userEmail,
       subject: `Welcome to Paired - Your Journey to Ideal Living Spaces Begins!`,
       react: EmailTemplate(),
