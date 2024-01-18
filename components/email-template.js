@@ -55,10 +55,12 @@ export const EmailTemplate = () => {
           with potential matches.
         </Text>
         <Text>Click the button below to explore Paired:</Text>
-        <Link href="#">Explore Paired</Link>
+        <Link href={`${process.env.URL}#features`}>
+          Learn more about Paired
+        </Link>
         <Text>
           If you have any questions or need assistance, don&apos;t hesitate to
-          reach out to our support team at support@paired.com.
+          reach out to our support team at support@paired-app.com.
         </Text>
         <Text>
           Best regards,
