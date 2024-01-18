@@ -68,10 +68,10 @@ const benefits = [
 export default function Home() {
   return (
     <>
-      <section className="w-full h-[100dvh] lg:h-full flex justify-center">
-        <div className="h-full px-8 py-24 mx-auto md:px-12 lg:px-24 max-w-7xl ">
-          <div className="text-center space-y-4">
-            <p className="text-4xl font-semibold leading-10 tracking-tighter text-gray-800 lg:text-7xl">
+      <section>
+        <div className="h-full px-8 py-24 mx-auto lg:py-32 md:px-12 lg:px-32 max-w-7xl">
+          <div className="text-center flex-col space-y-4">
+            <p className="text-5xl font-semibold leading-10 tracking-tighter text-gray-800 lg:text-7xl">
               Find Your Perfect Match with Paired, <br />
               <span className="text-blue-500 lg:block">
                 Your Ultimate Roommate and Room Search Companion
@@ -102,7 +102,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="scroll-mt-24" id="features">
+      <section className="scroll-mt-12" id="features">
         <div className="h-full px-8 py-4 mx-auto md:px-12 lg:px-24 max-w-7xl">
           <div className="text-center">
             <h2 className="text-4xl font-semibold tracking-tighter text-gray-900">
@@ -223,18 +223,18 @@ export default function Home() {
                 <ul role="list" className="mt-4 space-y-2">
                   <li>
                     <a
-                      href="https://twitter.com/lexingtonthemes"
+                      href="https://twitter.com/__paired"
                       className="text-sm text-gray-500 hover:text-black"
                     >
-                      @getPaired
+                      Twitter
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://twitter.com/Mike_Andreuzza"
+                      href="https://instagram.com/__paired"
                       className="text-sm text-gray-500 hover:text-black"
                     >
-                      @Paired_Co
+                      Instagram
                     </a>
                   </li>
                 </ul>

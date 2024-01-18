@@ -12,7 +12,7 @@ export const sendEmail = async (formData) => {
   ];
 
   try {
-    await fetch(`${process.env.URL}/api/send`, {
+    await fetch(`${process.env.URL}api/send`, {
       method: "POST",
       body: JSON.stringify(emails),
       headers: {
