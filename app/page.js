@@ -1,11 +1,9 @@
-// import cube from "@/public/images/cube.svg"
-// import Image from "next/image"
-// import Navbar from "@/app/dashboard/ui/navbar"
-// import Nav from "./nav"
 "use client";
-
-import { sendEmail } from "../actions/sendEmail";
+import Image from "next/image";
 import FormButton from "./ui/formButton";
+import img1 from "@/public/hero-img.svg";
+import img2 from "@/public/hero-img-2.svg";
+import { sendEmail } from "../actions/sendEmail";
 
 // export const Metadata = {
 //     title: "Paired: Find Compatible Roommates and Shared Flats - Roommate Search Service",
@@ -69,8 +67,19 @@ export default function Home() {
   return (
     <>
       <section>
-        <div className="h-full px-8 py-24 mx-auto lg:py-32 md:px-12 lg:px-32 max-w-7xl">
-          <div className="text-center flex-col space-y-4">
+        {/* <div className="w-full h-full bg-white bg-opacity-75" /> */}
+        <div className="h-full px-8 py-24 mx-auto lg:py-32 md:px-12 lg:px-32 max-w-7xl relative z-20">
+          <div className="absolute top-0 -left-64 z-0">
+            <Image
+              src={img1}
+              alt="img1"
+              width={540}
+              height={540}
+              className="z-0 lg:flex hidden"
+            />
+          </div>
+
+          <div className="text-center flex-col lg:space-y-4 space-y-2">
             <p className="text-5xl font-semibold leading-10 tracking-tighter text-gray-800 lg:text-7xl">
               Find Your Perfect Match with Paired, <br />
               <span className="text-blue-500 lg:block">
@@ -102,18 +111,27 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="scroll-mt-12" id="features">
-        <div className="h-full px-8 py-4 mx-auto md:px-12 lg:px-24 max-w-7xl">
+      <section className="scroll-mt-12 z-20" id="features">
+        <div className="h-full px-8 py-4 mx-auto md:px-12 lg:px-24 max-w-7xl relative">
           <div className="text-center">
             <h2 className="text-4xl font-semibold tracking-tighter text-gray-900">
               Discover Paired.
             </h2>
           </div>
+          <div className="absolute top-8 -right-64 z-0">
+            <Image
+              src={img2}
+              alt="img2"
+              width={640}
+              height={640}
+              className="z-0 lg:flex hidden "
+            />
+          </div>
           <div className="grid gap-4 mt-12 md:grid-cols-3">
             {feautures.map((feature, i) => (
               <div
                 key={i}
-                className="flex flex-col gap-4 p-8 rounded-xl bg-gray-50"
+                className="flex flex-col gap-4 p-8 rounded-xl bg-gray-50 z-20"
               >
                 <div className="flex items-center justify-center w-12 h-12 font-semibold text-white bg-blue-500 rounded-full">
                   {i + 1}
