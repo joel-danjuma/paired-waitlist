@@ -23,7 +23,7 @@ export const sendEmail = async (formData) => {
     //     "Content-Type": "application/json",
     //   },
     // });
-    const res = await axios.post(`${URL}/api/send`, emails, {
+    await axios.post(`${URL}/api/send`, emails, {
       headers: { "Content-Type": "application/json" },
     });
     console.log("Onboarding Email has been sent");
