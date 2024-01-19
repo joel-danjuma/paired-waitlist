@@ -16,7 +16,8 @@ export async function POST(req) {
       react: EmailTemplate(),
       reply_to: pairedEmail,
     });
-    console.log(Response.json(data));
+    // console.log(Response.json(data));
+    console.log("Post Request has been Sent");
     return Response.json(data);
   } catch (error) {
     console.log(Response.json({ error }));
