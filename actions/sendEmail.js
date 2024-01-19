@@ -11,9 +11,10 @@ export const sendEmail = async (formData) => {
     },
   ];
   console.log(emails);
+  const URL = process.env.NEXT_PUBLIC_URL;
 
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/send`, {
+    const res = await fetch(`${URL}/api/send`, {
       method: "POST",
       body: JSON.stringify(emails),
       headers: {
