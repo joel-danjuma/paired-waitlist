@@ -200,7 +200,7 @@ export default function Home() {
                   id="email-address"
                   name="email"
                   placeholder="Enter your email"
-                  required=""
+                  // required=""
                   type="email"
                 ></input>
                 <FormButton />

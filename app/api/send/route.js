@@ -1,6 +1,5 @@
 "use server";
 import { EmailTemplate } from "@/components/email-template";
-// import { NextRequest } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -16,25 +15,11 @@ export async function POST(req) {
       subject: `Welcome to Paired - Your Journey to Ideal Living Spaces Begins!`,
       react: EmailTemplate(),
       reply_to: pairedEmail,
-      // text: `
-
-      //             Welcome to Paired – your ultimate destination for finding compatible roommates and discovering ideal living spaces!
-      //             We're thrilled to have you on board the waitlist and can't wait to help you create meaningful connections and locate the perfect shared flat. Here's a glimpse of what Paired has to offer:
-      //             Create Your Profile: Showcase your preferences, interests, and lifestyle to find roommates who match your vibe.
-      //             Search for Roommate and Room Ads: Explore a diverse range of ads tailored to your preferences and discover the best matches.
-      //             Connect with Potential Matches: Start meaningful conversations and build connections with potential roommates to ensure a harmonious living experience.
-      //             While you eagerly await your turn, feel free to explore more about Paired and get ready for an exciting journey ahead.
-      //             Thank you for choosing Paired – where finding the perfect roommate and shared flat becomes a breeze. If you have any questions or need assistance, our dedicated support team is here to help at support@paired.com.
-
-      //             Best regards,
-
-      //             The Paired Team
-      //         `,
     });
-    // console.log(Response.json(data));
+    console.log(Response.json(data));
     return Response.json(data);
   } catch (error) {
-    // console.log(Response.json({ error }));
+    console.log(Response.json({ error }));
     return Response.json({ error });
   }
 }

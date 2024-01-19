@@ -12,14 +12,17 @@ export const sendEmail = async (formData) => {
   ];
 
   try {
-    await fetch(`${process.env.URL}api/send`, {
+    await fetch(`${process.env.NEXT_PUBLIC_URL}/api/send`, {
       method: "POST",
       body: JSON.stringify(emails),
       headers: {
         "Content-Type": "application/json",
       },
     });
+    // console.log(process.env.NEXT_PUBLIC_URL);
+    console.log("Posting User Email Details");
   } catch (error) {
+    console.log(error);
     return JSON.stringify(error);
   }
 };

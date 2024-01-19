@@ -14,7 +14,7 @@ export const EmailTemplate = () => {
         <Head>
           <title>Welcome to Paired!</title>
         </Head>
-        <Container className="w-full h-full flex-col text-2xl bg-slate-100">
+        <Container>
           <h1 className="text-4xl font-bold text-blue-400">
             Welcome to Paired!
           </h1>
