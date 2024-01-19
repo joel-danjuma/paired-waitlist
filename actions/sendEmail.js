@@ -10,6 +10,7 @@ export const sendEmail = async (formData) => {
       pairedEmail: "Leojjad@gmail.com",
     },
   ];
+  console.log(emails);
 
   try {
     await fetch(`${process.env.NEXT_PUBLIC_URL}/api/send`, {
