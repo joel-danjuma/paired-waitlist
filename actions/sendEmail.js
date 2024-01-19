@@ -12,6 +12,7 @@ export const sendEmail = async (formData) => {
   ];
   console.log(emails);
   const URL = process.env.NEXT_PUBLIC_URL;
+  console.log(URL);
 
   try {
     const res = await fetch(`${URL}/api/send`, {
@@ -21,14 +22,9 @@ export const sendEmail = async (formData) => {
         "Content-Type": "application/json",
       },
     });
-    if (!res) {
-      console.log("Fetch api did not work");
-      return;
-    } else {
-      console.log("Posting User Email Details");
-      console.log(res);
-      return res;
-    }
+
+    console.log(JSON.stringify(res));
+    return JSON.stringify(res);
   } catch (error) {
     console.log(error);
     return JSON.stringify(error);
