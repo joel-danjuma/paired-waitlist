@@ -3,6 +3,7 @@ import Image from "next/image";
 import FormButton from "./ui/formButton";
 import img1 from "@/public/hero-img.svg";
 import img2 from "@/public/hero-img-2.svg";
+import logo from "@/public/paired-4.png";
 import { sendEmail } from "../actions/sendEmail";
 
 // export const Metadata = {
@@ -214,7 +215,8 @@ export default function Home() {
           <div className="pt-12 border-t border-gray-300 xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="text-black">
               <div className="inline-flex items-center gap-3">
-                <p className="text-2xl font-bold uppercase">Paired</p>
+                <Image src={logo} width={120} height={120} alt="logo" />
+                {/* <p className="text-2xl font-bold uppercase">Paired</p> */}
               </div>
               <p className="mt-2 text-sm text-gray-500 lg:w-4/5">
                 Discover Your Perfect Match and Ideal Living Space with Paired{" "}

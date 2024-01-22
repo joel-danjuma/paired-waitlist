@@ -1,5 +1,4 @@
 "use server";
-import { headers } from "@/next.config";
 import axios from "axios";
 export const sendEmail = async (formData) => {
   const userEmail = formData.get("email");
@@ -26,7 +25,7 @@ export const sendEmail = async (formData) => {
     await axios.post(`${URL}/api/send`, emails, {
       headers: { "Content-Type": "application/json" },
     });
-    console.log("Onboarding Email has been sent");
+    console.log(`Onboarding Email has been sent to ${userEmail}`);
     return;
   } catch (error) {
     console.log(error);
